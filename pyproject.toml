@@ -23,6 +23,7 @@ dependencies = [
     # "wordcloud",       # WHY: Quick visual exploration of word frequencies in text corpora.
     # "spacy", # WHY: Industrial-strength NLP library for tokenization and linguistic analysis.
     "pytest",
+    "pytest-cov",
 ]
 
 [project.optional-dependencies]
