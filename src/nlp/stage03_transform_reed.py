@@ -1,6 +1,5 @@
 """
-stage03_transform_case.py
-(EDIT YOUR COPY OF THIS FILE)
+stage03_transform_reed.py
 
 Source: validated JSON object
 Sink: Polars DataFrame
@@ -65,11 +64,9 @@ def run_transform(
     for record in json_data:
         records.append(
             {
-                "post_id": record["postId"],
-                "id": record["id"],
-                "name": record["name"],
-                "email": record["email"],
-                "body": record["body"],
+                "index": record["index"],
+                "spell": record["spell"],
+                "use": record["use"],
             }
         )
 
@@ -78,8 +75,8 @@ def run_transform(
     # Derived fields
     df = df.with_columns(
         [
-            pl.col("name").str.len_chars().alias("name_length"),
-            pl.col("body").str.len_chars().alias("body_length"),
+            pl.col("spell").str.len_chars().alias("spell_length"),
+            pl.col("use").str.len_chars().alias("use_length"),
         ]
     )
 

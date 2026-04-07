@@ -32,7 +32,7 @@ from pathlib import Path
 # ============================================================
 
 # TODO: In your custom app, change the URL to work with a different API that returns JSON data.
-API_URL: str = "https://jsonplaceholder.typicode.com/comments"
+API_URL: str = "https://potterapi-fedeperin.vercel.app/en/spells"
 
 # TODO: In your custom app, change the header user-agent value
 # to something that represents your app or project.
